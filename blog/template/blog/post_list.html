@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>My first django girls</title>
 </head>
 <body>
-$END$
+<div>
+<h2>block 1</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet aut commodi consequuntur eius esse exercitationem iure labore laudantium libero nesciunt nihil nostrum, nulla possimus quibusdam quisquam sit tempora temporibus.</p>
+</div>
+
+
+<!--{% for post in posts %}-->
+    <!--{{ post }}-->
+<!--{% endfor %}-->
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
